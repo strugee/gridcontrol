@@ -1,0 +1,34 @@
+#wrapper {
+	text-align: center;
+}
+
+.alphatag {
+	font-size: .65em;
+	position: relative;
+	top: .4em;
+	right: .1em;
+}
+
+.betatag {
+	/* Code for later, when we move to beta and update for this in index.html and prefs.html */
+	font-size: .5em;
+	font-style: italic;
+	position: relative;
+	top: .4em;
+	right: .1em;
+	color: #484848;
+}
+
+#dropoffbutton {
+	color: black;
+	background-color: blue;
+	padding: 2em;
+	margin: 2em;
+}
+
+#deletemebutton {
+	color: black;
+	background-color: red;
+	padding: 2em;
+	margin: 2em;
+}
