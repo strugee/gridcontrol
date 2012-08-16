@@ -71,9 +71,11 @@ When developing, try to follow the roadmap and only work on the current mileston
 - nodejs SPDY server (spdyd)
  - includes HTTPS (by specification)
  - minimal implementation, no optional features used - for example, no resource hinting
+ - support for multiple locales
 
 #### v3 ####
 - full SPDY implementation - all optional features used, where appropriate
+- plugins system (to modify the interface and functionality)
 
 
 [1]: http://ramblingsfromalex.blogspot.com/2012/06/introducing-grid-control.html
