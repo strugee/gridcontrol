@@ -53,7 +53,20 @@ When a website first asks for access to a gridcontrol instance, a verification s
 
 ### Service Broker API (SBAPI) ###
 
+Still a fluid design. So far, Service Brokers will basically expose methods to gridcontrold to perform the two gridcontrol actions, and gridcontrol will then call those actions. Not sure how Service Brokers will understand
+different identities/accounts yet.
 
+### Plugin/Extention API (EAPI) ###
+
+The plugin system (due to land by milestone 3) will consist of two parts, heavily inspired by Firefox's plugin interface.
+
+The first will consist of APIs (collectively the Extention API, or EAPI) built into gridcontrol to modify the functionality or looks. To install a plugin of this type, you'll drop a JS file into a certain directory. gridcontrol will run it, modify the interface or functionality
+according to the API calls in the JS file, and be done.
+
+The second will be a system in which a plugin author can specify custom content to replace part of the gridcontrol interface. Every single part of the interface will be broken up using `<div>`s, and a developer will be able
+to choose to insert his or her custom HTML after a `<div>`, or totally replace the `<div>`. He or she will be able to specify custom CSS, which will always get loaded after the main gridcontrol CSS, to allow for overwriting CSS
+selectors. Finally, he or she will be allowed to load custom JS files into the gridcontrol page. This type of extension will be packaged as a directory, which you'll drop into the same directory as the first plugin type to install.
+The plugin author will also be allowed to make EAPI calls in this type of extenstion by way of special JS files, effectively embedding a type one extention in a type two extention.
 
 ---
 
@@ -73,26 +86,35 @@ feel free to work on future roadmap items.
  - A nessesary prerequisite to this is knowledge of JavaScript.
 2. You'll also obviously need a working git client and a GitHub account.
 3. You'll have to understand the GitHub flow and be willing to follow it.
- - The only exception to this is if you are landing v1 roadmap items - in this case, feel free to land directly on master if you have the rights.
+ - The only exception to this is if you are landing m1 roadmap items - in this case, feel free to land directly on master if you have the rights.
 
 ### roadmap ###
 
-#### v1 ####
+#### m1 ####
 - nodejs HTTP server (httpd)
 - nodejs service backend server (gridcontrold)
 - preliminary, usable Service Broker API (SBAPI)
  - must fully support API feature detection
 
-#### v2 ####
+#### m2 ####
 - SBAPI work
  - API expansions, possible redesign
- - future backwards compatibility guaranteed
+ - future backwards compatibility guaranteed, except in major API revisions
+  - API revisions will be announced well in advance, and both the old APIs and the new APIs will be available for use (even at the same time, so you could transition part of your codebase - even individual API calls - without
+    doing the entire thing)
+- preliminary, usable Web API (WAPI)
 - nodejs SPDY server (spdyd)
  - includes HTTPS (by specification)
  - minimal implementation, no optional features used - for example, no resource hinting
- - support for multiple locales
+- support for multiple locales
+ - not having the actual strings, just support for adding them
 
-#### v3 ####
+#### m3 ####
+- WAPI work
+ - API expansions, possible redesign
+ - future backwards compatibility guaranteed, except in major API revisions
+  - API revisions will be announced well in advance, and both the old APIs and the new APIs will be available for use (even at the same time, so you could transition part of your codebase - even individual API calls - without
+    doing the entire thing)
 - full SPDY implementation - all optional features used, where appropriate
 - plugins system (to modify the interface and functionality)
 
