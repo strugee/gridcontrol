@@ -2,7 +2,7 @@
    Author's custom styles
    ========================================================================== */
 
-#wrapper {
+#container {
 	text-align: center;
 }
 
@@ -23,6 +23,7 @@
 	color: #484848;
 }
 
+/* Legacy code (pre-Bootstrap)
 #dropoffbutton {
 	color: black;
 	background-color: blue;
@@ -36,3 +37,4 @@
 	padding: 2em;
 	margin: 2em;
 }
+*/
