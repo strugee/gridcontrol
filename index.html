@@ -34,12 +34,26 @@
 			<br />
 			<p>
 				<a id="dropoffbutton" class="btn btn-large btn-warning" href="#">Drop off the grid</a>
-				<a id="deletemebutton" class="btn btn-large btn-danger" href="#">Delete me from the grid</a>
+				<a id="deletemebutton" class="btn btn-large btn-danger" data-toggle="modal" href="#deletealert">Delete me from the grid</a>
 			</p>	
 			<p>
 				<a href="prefs.html">Preferences</a>
 			</p>
 		</div>
+		
+		<div id="deletealert" class="modal hide fade">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3>Warning!</h3>
+			</div> <!-- /modal-header -->
+			<div class="modal-body">
+				<p>This action <strong>cannot be undone</strong>. In most cases, your data will be <strong>permanently deleted</strong>.</p>
+			</div> <!-- /modal-body -->
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Whoa, I didn't want that...</button>
+				<button class="btn btn-link">I'm sure, continue...</button>
+			</div> <!-- /modal-footer -->
+		</div> <!-- /deletealert -->
 
             <!--<footer>
                 <p>&copy; Company 2012</p>
