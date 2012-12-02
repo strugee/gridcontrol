@@ -3,13 +3,15 @@
 
 # TEAM
 
-	<name> -- <role> -- <twitter>
+	Alex Jordan -- concept, design and code (everything) -- @strugee (github) @strugee2 (twitter)
 
 # THANKS
 
-	<name>
+	My parents, for giving me the 10-15 year old Windows 2000 computer that is now
+	my server, and that will run Grid Control. Someday.
 
 # TECHNOLOGY COLOPHON
 
 	HTML5, CSS3
 	jQuery, Modernizr
+	Twitter Bootstrap
