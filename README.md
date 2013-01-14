@@ -103,6 +103,7 @@ feel free to work on future roadmap items.
   - API revisions will be announced well in advance, and both the old APIs and the new APIs will be available for use (even at the same time, so you could transition part of your codebase - even individual API calls - without
     doing the entire thing)
 - preliminary, usable Web API (WAPI)
+ - data liberation
 - nodejs SPDY server (spdyd)
  - includes HTTPS (by specification)
  - minimal implementation, no optional features used - for example, no resource hinting
