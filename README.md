@@ -68,8 +68,6 @@ to choose to insert his or her custom HTML after a `<div>`, or totally replace t
 selectors. Finally, he or she will be allowed to load custom JS files into the gridcontrol page. This type of extension will be packaged as a directory, which you'll drop into the same directory as the first plugin type to install.
 The plugin author will also be allowed to make EAPI calls in this type of extenstion by way of special JS files, effectively embedding a type one extention in a type two extention.
 
-gridcontrol will also include support for user-specific extensions, in which users will be able to upload their own extensions and gridcontrol will build custom pages for them, keeping the experience the same for all other users.
-
 All of this basically adds up to mean that gridcontrol will have the most robust and badass extension system of all web applications.
 
 ---
